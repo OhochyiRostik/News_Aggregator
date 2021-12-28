@@ -1,0 +1,44 @@
+{
+  "name": "publinews-backend",
+  "description": "backend for web node js project",
+  "main": "./src/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.3.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.4.1"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
+  },
+  "scripts": {
+    "start": "node ./src/",
+    "start:dev": "nodemon ./src/",
+    "prepare": "husky install",
+    "lint": "eslint src/",
+    "lint:fix": "eslint --fix src/",
+    "format:check": "prettier --check src/",
+    "format:write": "prettier --write src/",
+    "test": "echo 'Tests ok!'"
+  },
+  "dependencies": {
+    "@mtproto/core": "6.0.1",
+    "cheerio": "^1.0.0-rc.10",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "knex": "^0.95.14",
+    "pg": "^8.7.1",
+    "pgtools": "^0.3.2",
+    "request": "^2.88.2",
+    "request-promise-native": "^1.0.9",
+    "tumblr.js": "^3.0.0",
+    "twitter-api-v2": "^1.7.0"
+  }
+}
